@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap');
+
+/* Reset some basic elements */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    background-color: #121212;
+    color: white;
+    min-height: 100%;
+}
+
+#page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: stretch;
+}
+
+/* Style for the header including the logo and navigation */
+header {
+    background-color: #1a1a1a;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.75);
+    padding: 15px 0 25px;
+    transition: padding 0.5s, background-color 0.5s;
+}
+
+.logo-header {
+    position: fixed;
+    background-color: #1a1a1a;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+}
+
+/* Position the logo on the left inside the header */
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 30px; /* Increase left padding for the logo */
+    transform: translateY(-50%);
+    width: 150px;
+    height: auto;
+}
+
+nav {
+    text-align: center;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Use flex for horizontal layout */
+    justify-content: center; /* Center navigation items */
+    align-items: center;
+    height: 100%;
+}
+
+nav ul li {
+    margin: 0 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px; /* Increase font size */
+    padding: 10px 0;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #dddddd;
+}
+
+/* Hero section style */
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    background: linear-gradient(145deg, rgba(255,255,255,0.1), rgba(0,0,0,0.5));
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.hero h1 {
+    font-size: 4em;
+    font-weight: 300;
+    margin-bottom: 0.25em; /* Reduce margin-bottom */
+    letter-spacing: 6px;
+}
+
+.hero h1 > strong {
+    font-weight: 700;
+}
+
+.hero p {
+    max-width: 800px;
+    margin: 0 auto 2em; /* Increase margin-bottom for spacing */
+    line-height: 1.6;
+    font-size: 1.25em;
+}
+
+/* Additional styles */
+.brand-name {
+    font-weight: 300;
+    text-transform: uppercase;
+    position: absolute;
+    left: 30px;
+    top: 10px;
+    font-size: 20px;
+}
+
+.brand-name > strong {
+    font-weight: 400;
+}
+
+/* Adjustments when hero is hidden */
+.header-scrolled .brand-name {
+    display: block; /* Show the brand name when the hero is hidden */
+}
+
+.header-scrolled .hero {
+    display: none; /* Hide the hero content when scrolling down */
+}
+
+
+/* Call to action button */
+.cta-button {
+    padding: 18px 35px; /* Increase padding for a larger button */
+    background-color: #333333;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px; /* Rounded corners */
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background-color: #444444;
+    transform: scale(1.05); /* Slight increase in size on hover */
+}
+
+/* Default style for sections */
+section {
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 80px 20px;
+}
+
+section > .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left; /* Align text to the left */
+}
+
+section p {
+    line-height: 1.6;
+    font-size: 1.25em;
+    font-weight: 300;
+}
+
+/* Style for the footer */
+footer {
+    background-color: #1a1a1a;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.75);
+    height: 40px;
+}
+
+/* Additional styles for uppercased text */
+.text-upper {
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Increase letter-spacing */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3em; /* Smaller font size for smaller screens */
+    }
+
+    .hero p {
+        font-size: 1em; /* Smaller font size for smaller screens */
+    }
+
+    nav ul li {
+        margin: 0 10px; /* Less margin for smaller screens */
+    }
+
+    .cta-button {
+        padding: 15px 25px; /* Smaller padding for smaller buttons */
+    }
+}

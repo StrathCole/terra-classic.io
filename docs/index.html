@@ -1,12 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-	<meta name="charset" value="utf-8" />
-	<title>TC Test Site</title>
-    </head>
-    <body>
-	    <h1>Terra Classic Test Page</h1>
-	    <p>This is a test page</p>
-    </body>
-</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Dark Themed Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="page">
+        <header>
+            <div class="logo-header">
+                <!--<img src="logo.png" alt="Logo" class="logo">-->
+                <div class="brand-name" id="navBrand">Terra <strong>Classic</strong></div>
+                <nav>
+                    <ul>
+                        <li><a href="#" onclick="showSection('home')">Home</a></li>
+                        <li><a href="#" onclick="showSection('about')">About</a></li>
+                        <li><a href="#" onclick="showSection('roadmap')">Roadmap</a></li>
+                        <li><a href="https://github.com/classic-terra" target="_blank" rel="noopener noreferer">Contribute</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="hero" id="hero">
+                <h1 class="text-upper"><strong>Welcome</strong> to Terra Classic</h1>
+                <p>”What is dead may never die.”</p>
+                <button class="cta-button" onclick="showSection('about')">Learn About Terra Classic</button>
+            </div>
+        </header>
 
+        <section id="home" class="section">
+            <div class="container">
+                <h1>Terra Classic Community</h1>
+                <p>Welcome to Terra Classic. Here, a dedicated community is the heart of the network, working together towards a common goal. With no stablecoins currently pegged, the focus is on exploring paths for the future.</p>
+                <p>The Terra Classic platform has become a hub for discussion, development, and the open exchange of ideas. While there are challenges, the collective effort of the community is paving the way for new possibilities.</p>
+                <button class="cta-button" onclick="showSection('about')">Learn About Our Community</button>
+            </div>
+        </section>
+
+        <section id="about" class="section" style="display: none;">
+            <div class="container">
+                <h1>The Terra Classic Story</h1>
+                <p>Terra Classic began as an ambitious blockchain project with a simple premise: to enable easy and accessible financial transactions. Over time, it has evolved, shaped by the experiences of its users and the broader community.</p>
+                
+                <h2>Community-Driven Progress</h2>
+                <p>The strength of Terra Classic lies in its community. From developers to daily users, a diverse group of people come together to contribute their skills and ideas. This collaboration is the cornerstone of the network’s ongoing development and the driving force behind its adaptability and resilience.</p>
+                
+                <h2>Adaptation and Innovation</h2>
+                <p>Change is constant in the world of blockchain, and Terra Classic is no exception. The community is currently focused on finding new ways to leverage the network’s capabilities. While the original vision has shifted, the commitment to innovation and utility remains strong.</p>
+                
+                <h2>Collaborative Efforts</h2>
+                <p>Reviving Terra Classic is a collective endeavor. It's about more than just technology; it’s about a shared mission to build something that lasts. The community's dedication to problem-solving and collaboration is leading to new ideas and projects that could redefine the network’s future.</p>
+                
+                <h2>A Future Forged Together</h2>
+                <p>Looking ahead, the path for Terra Classic is one of collective effort and shared vision. The community is engaging in thoughtful planning and execution to ensure the network not only recovers but thrives. It’s a commitment to a future forged by unity and powered by the belief in the potential of blockchain technology.</p>
+            </div>
+        </section>
+        
+        <section id="roadmap" class="section" style="display: none;">
+            <div class="container">
+                <h1>The Terra Classic Roadmap</h1>
+                <p>Up to governance decisions.</p>
+            </div>
+        </section>
+        
+
+
+        <footer>
+            <!-- Footer Content -->
+            &copy; 2023 by the Terra Classic Community
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
