@@ -31,7 +31,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
-
+    min-height: 50px;
 }
 
 /* Position the logo on the left inside the header */
@@ -42,6 +42,16 @@ header {
     transform: translateY(-50%);
     width: 150px;
     height: auto;
+}
+
+.burger-menu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    top: 15px;
+    z-index: 1001;
 }
 
 nav {
@@ -184,20 +194,77 @@ footer {
 }
 
 /* Responsive design adjustments */
+/* ... existing styles ... */
+
+/* Responsive design adjustments for smaller screens */
 @media (max-width: 768px) {
+    /* Adjustments to the hero section for smaller screens */
     .hero h1 {
-        font-size: 3em; /* Smaller font size for smaller screens */
+        font-size: 2.5em; /* Smaller font size for the hero title */
     }
 
     .hero p {
-        font-size: 1em; /* Smaller font size for smaller screens */
+        font-size: 1em; /* Smaller font size for the hero paragraph */
     }
 
+    .logo-header {
+        position: fixed;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0; /* Start off-screen */
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        transition: left 0.5s;
+        z-index: 1000;
+    }
+
+    nav.menu-visible {
+        display: block;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
     nav ul li {
-        margin: 0 10px; /* Less margin for smaller screens */
+        margin: 10px 0;
+        text-align: center;
+    }
+    
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.5em;
     }
 
-    .cta-button {
-        padding: 15px 25px; /* Smaller padding for smaller buttons */
+    /* Adjust logo size and position */
+    .logo {
+        width: 100px; /* Adjust the logo size for smaller screens */
+    }
+
+    /* Adjust the brand name for smaller screens */
+    .brand-name {
+        font-size: 16px; /* Smaller font size for the brand name */
+        top: 15px; /* Adjust the vertical position */
+        left: 15px; /* Adjust the horizontal position */
+    }
+
+    /* Adjust the header padding */
+    header {
+        padding: 10px 0; /* Reduce the top and bottom padding */
     }
 }
