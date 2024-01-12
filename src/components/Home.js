@@ -9,6 +9,9 @@ export default function Home() {
                     <strong>Terra Classic</strong> Community
                 </Typography>
                 <Typography paragraph>
+                    <strong>This is a Proof-of-Concept site and not the official Terra Classic website.</strong>
+                </Typography>
+                <Typography paragraph>
                     Welcome to Terra Classic. Here, a dedicated community is the heart of the network, working together towards a common goal. With no stablecoins currently pegged, the focus is on exploring paths for the future.
                 </Typography>
                 <Typography paragraph>
